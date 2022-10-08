@@ -11,8 +11,8 @@ Resources:
       BucketName: 'ime-sonny-akpan'
 Outputs:
   BucketName:
-    Value: !Ref 'S3Bucket'
+    Value: !Ref 'ApplicationBucket'
     Description: Name of the sample Amazon S3 bucket.
   BucketArn:
-    Value: !GetAtt S3Bucket.Arn
+    Value: !GetAtt ApplicationBucket.Arn
     Description: The Bucket ARN.
