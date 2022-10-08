@@ -93,7 +93,7 @@ Resources:
   # -- Means that updates are pushed from GitHub, rather than AWS having to poll
   # -- Means we can filter for required changes
   GithubWebhook:
-    Type: 'AWS::CodePipeline::Webhook'
+    Type: AWS::CodePipeline::Webhook
     Properties:
       Authentication: GITHUB_HMAC
       AuthenticationConfiguration:

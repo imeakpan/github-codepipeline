@@ -8,11 +8,11 @@ Resources:
   ApplicationBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: 'ime-sonny-akpan'
+      BucketName: !Ref AWS::StackName
 Outputs:
   BucketName:
-    Value: !Ref 'ApplicationBucket'
-    Description: Name of the sample Amazon S3 bucket.
+    Value: !Ref ApplicationBucket
+    Description: Name of the Application S3 bucket.
   BucketArn:
     Value: !GetAtt ApplicationBucket.Arn
     Description: The Bucket ARN.
