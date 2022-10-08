@@ -5,7 +5,7 @@ Description: github-codepipeline-app
 # This is just here as an example resource
 
 Resources:
-  S3Bucket:
+  ApplicationBucket:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: 'ime-sonny-akpan'
