@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: github-cloudformation-codepipeline-app
+Description: This stack deploys an S3 Bucket
 
 # This is just here as an example resource
 
