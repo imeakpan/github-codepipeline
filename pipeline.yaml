@@ -1,14 +1,11 @@
 AWSTemplateFormatVersion: '2010-09-09'
-# *** Change this to something useful for you!
-Description: github-codepipeline
-
+Description: This stack deploys an AWS S3 Bucket using CodePipeline and github
 Parameters:
   # *** This value must always be passed in when creating / updating stack
   # "NoEcho" is set to true, for security, so token won't be visible when examining the resulting stack
   GitHubOAuthToken:
     Type: String
     NoEcho: true
-
 
   # *** The remaining parameters should either be:
   # - overridden via changing "Default" here (PREFERABLE, since then they're in source control)
@@ -17,23 +14,19 @@ Parameters:
   # *** The owner of the Github repo for this application.
   GitHubOwner:
     Type: String
-    Default: imeakpan
     AllowedPattern: "[A-Za-z0-9-]+"
 
   GitHubRepo:
     Type: String
-    Default: github-codepipeline
     AllowedPattern: "[A-Za-z0-9-]+"
 
   GitHubBranch:
     Type: String
-    Default: master
     AllowedPattern: "[A-Za-z0-9-]+"
 
   # *** The stack name for the actual application we're deploying
   ApplicationStackName:
     Type: String
-    Default: github-codepipeline-app
     AllowedPattern: "[A-Za-z0-9-]+"
 
 Resources:
@@ -69,6 +62,7 @@ Resources:
             Branch: !Ref GitHubBranch
             PollForSourceChanges: false
             OAuthToken: !Ref GitHubOAuthToken
+            TemplateConfiguration: !Sub "SourceCode::pipeline-params.json"
           RunOrder: 1
       # Build and Deploy, etc., stages would follow. Here is an example
       - Name: Deploy
