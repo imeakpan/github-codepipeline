@@ -43,8 +43,6 @@ Parameters:
     Default: application-params.json
     AllowedPattern: "[A-Za-z0-9-]+"
 
-
-
 Resources:
   PipelineArtifactsBucket:
     Type: AWS::S3::Bucket
