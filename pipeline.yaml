@@ -43,6 +43,7 @@ Resources:
   CodePipeline:
     Type: AWS::CodePipeline::Pipeline
     Properties:
+      Name: !Ref GitHubRepo
       ArtifactStore:
         Type: S3
         Location: !Ref PipelineArtifactsBucket
