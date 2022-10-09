@@ -1,13 +1,16 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: This stack deploys an S3 Bucket
 
-# This is just here as an example resource
+Parameters:
+  S3BucketName:
+    Type: String
 
 Resources:
   ApplicationBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Ref AWS::StackName
+      BucketName: !Ref S3BucketName
+
 Outputs:
   BucketName:
     Value: !Ref ApplicationBucket

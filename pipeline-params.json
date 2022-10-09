@@ -1,8 +1,0 @@
-{
-  "Parameters" : {
-    "GitHubOwner" : "imeakpan",
-    "GitHubRepo" : "github-codepipeline",
-    "GitHubBranch" : "master",
-    "ApplicationStackName" : "github-cloudformation-codepipeline-app"
-  }
-}

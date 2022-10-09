@@ -83,6 +83,7 @@ Resources:
             Capabilities: CAPABILITY_IAM
             RoleArn: !GetAtt CloudformationRole.Arn
             StackName: !Ref ApplicationStackName
+            TemplateConfiguration: !Sub "SourceCode::application-params.json"
             TemplatePath: !Sub "SourceCode::application.yaml"
           RunOrder: 1
 
