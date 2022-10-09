@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: This stack deploys an AWS S3 Bucket using CodePipeline and github
+Description: This stack creates an AWS CodePipeline connected to github. It deploys the Application stack
 Parameters:
   # *** This value must always be passed in when creating / updating stack
   # "NoEcho" is set to true, for security, so token won't be visible when examining the resulting stack
